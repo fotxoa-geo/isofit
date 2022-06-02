@@ -1,5 +1,5 @@
 {
-    "wavelength_file": "~/EMIT/veg-simulation/wavelengths/emit.txt",
+    "wavelength_file": "~/EMIT/veg-simulation/wavelengths/emit_wavelengths.txt",
     "reflectance_file": "~/EMIT/veg-simulation/output/spectra_grid_bootstrap",
     "rtm_template_file": "/dev/null",
     "lutdir": "./luts/sRTMnet",
