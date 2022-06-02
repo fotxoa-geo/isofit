@@ -116,7 +116,7 @@ echo "Total Cores: ${total_cores}"
 ### run workflow and summary script
 echo " "
 echo "Run Hypertrace workflow"
-python slurm/set_ray_params.py ${1} $redis_password $ip_head $total_cores
+python ..isofit/examples/py-hypertrace/slurm/set_ray_params.py ${1} $redis_password $ip_head $total_cores
 
 python ../isofit/examples/py-hypertrace/workflow.py ${1}
 #python summarize.py ${1}

@@ -39,9 +39,9 @@
                     "vswir": {
                         "engine_name": "sRTMnet",
                         "engine_base_dir": "~/EMIT/6sv-2.1",
-                        "aerosol_template_path": "../../data/aerosol_template.json",
-                        "earth_sun_distance_file": "../../data/earth_sun_distance.txt",
-                        "irradiance_file": "../../examples/20151026_SantaMonica/data/prism_optimized_irr.dat",
+                        "aerosol_template_path": "~/EMIT/isofit/data/aerosol_template.json",
+                        "earth_sun_distance_file": "~/EMIT/isofit/data/earth_sun_distance.txt",
+                        "irradiance_file": "~/EMIT/isofit/examples/20151026_SantaMonica/data/prism_optimized_irr.dat",
                         "emulator_aux_file": "~/EMIT/sRTMnet_v100/sRTMnet_v100_aux.npz",
                         "emulator_file": "~/EMIT/sRTMnet_v100/sRTMnet_v100",
                         "statevector_names": ["H2OSTR", "AOT550"]
@@ -59,7 +59,7 @@
         "atm_aod_h2o": [["ATM_MIDLAT_SUMMER", 0.2, 1.0], ["ATM_MIDLAT_SUMMER", 0.3, 2.0]],
         "observer_zenith": [0, 22.5],
         "inversion_mode": ["inversion"],
-        "noisefile": ["./hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"],
-        "surface_file": ["./hypertrace-data/priors/emit/emit.mat"]
+        "noisefile": ["~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"],
+        "surface_file": ["~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"]
     }
 }
