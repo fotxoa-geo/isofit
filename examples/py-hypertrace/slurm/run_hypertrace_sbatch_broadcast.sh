@@ -35,7 +35,7 @@ echo "Starting at: " `date`
 # to find base environment, run "conda info | grep -i 'base environment'"
 # replace prefix $conda_base_env with path to conda location
 # e.g. conda_base_env=/home/sserbin/miniconda3/
-conda_base_env=/user/geog/fochoa/miniconda3
+conda_base_env=/user/geog/fochoa/miniconda3/
 # for bash
 source ${conda_base_env}etc/profile.d/conda.sh
 #
