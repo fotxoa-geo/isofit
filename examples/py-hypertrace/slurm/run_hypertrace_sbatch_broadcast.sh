@@ -118,8 +118,8 @@ echo " "
 echo "Run Hypertrace workflow"
 python slurm/set_ray_params.py ${1} $redis_password $ip_head $total_cores
 
-python workflow.py ${1}
-python summarize.py ${1}
+python ../isofit/examples/py-hypertrace/workflow.py ${1}
+#python summarize.py ${1}
 
 echo " "
 echo "Run completed on: " `date`
