@@ -12,7 +12,7 @@
 #######################################################################################
 ### Set script options:
 #conda_env=/data2/sserbin/conda_envs/isofit_develop
-conda_env=/data2/sserbin/conda_envs/isofit_develop
+conda_env=/user/geog/fochoa/miniconda3/envs/veg-calib
 
 # define any required modules, e.g. 
 #module load libradtran gdal/3.1.2_hdf4-gcc840 proj/7.1.0-gcc840 geos/3.8.1-gcc840 
@@ -35,7 +35,7 @@ echo "Starting at: " `date`
 # to find base environment, run "conda info | grep -i 'base environment'"
 # replace prefix $conda_base_env with path to conda location
 # e.g. conda_base_env=/home/sserbin/miniconda3/
-conda_base_env= /user/geog/fochoa/miniconda3
+conda_base_env=/user/geog/fochoa/miniconda3
 # for bash
 source ${conda_base_env}etc/profile.d/conda.sh
 #
