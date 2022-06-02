@@ -54,11 +54,11 @@ def surface_model(config_path: str, wavelength_path: str = None,
     if wavelength_path is not None:
         wavelength_file = wavelength_path
     else:
-        wavelength_file = expand_path(configdir, config['wavelength_file'])
+        wavelength_file = expand_path(config['wavelength_file'])
     if output_path is not None:
         outfile = output_path
     else:
-        outfile = expand_path(configdir, config['output_model_file'])
+        outfile = expand_path(config['output_model_file'])
     normalize = config['normalize']
     reference_windows = config['reference_windows']
 
