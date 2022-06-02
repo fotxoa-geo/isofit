@@ -60,6 +60,6 @@
         "observer_zenith": [0, 22.5],
         "inversion_mode": ["inversion"],
         "noisefile": ["./hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"],
-        "surface_file": ["./hypertrace-data/priors/aviris-ng/surface_EMIT.mat"]
+        "surface_file": ["./hypertrace-data/priors/emit/emit.mat"]
     }
 }
