@@ -2,8 +2,8 @@
     "wavelength_file": "~/EMIT/veg-simulation/wavelengths/emit_wavelengths.txt",
     "reflectance_file": "~/EMIT/veg-sim-data/output/spectra_grid_bootstrap",
     "rtm_template_file": "/dev/null",
-    "lutdir": "./luts/sRTMnet",
-    "outdir": "./output/veg-simulation",
+    "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
+    "outdir": "~/EMIT/veg-sim-data/output/output/hypertrace/veg-simulation",
     "isofit": {
         "forward_model": {
             "instrument": {
