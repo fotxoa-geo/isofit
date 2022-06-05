@@ -3,7 +3,7 @@
     "reflectance_file": "~/EMIT/veg-sim-data/output/spectra_grid_bootstrap",
     "rtm_template_file": "/dev/null",
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
-    "outdir": "~/EMIT/veg-sim-data/output/output/hypertrace/veg-simulation",
+    "outdir": "~/EMIT/veg-sim-data/output/hypertrace/output/veg-simulation",
     "isofit": {
         "forward_model": {
             "instrument": {
