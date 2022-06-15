@@ -19,7 +19,10 @@
     ],
     "inversion_mode": ["inversion"],
     "noisefile": ["~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"],
-    "observer_zenith": [0, 22.5],
+    "observer_azimuth": [0, 45, 90],
+    "observer_zenith": [0, 45, 90],
+    "solar_zenith": [0, 45, 90],
+    "solar_azimuth" : [0, 45, 90],
     "surface_file": ["~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"]
   },
   "isofit": {
