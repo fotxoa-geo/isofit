@@ -115,7 +115,7 @@
             },
             "ip_head": "10.10.1.12:6379",
             "n_cores": 6,
-            "redis_password": "79ff3f69-4c41-476a-bce3-1a651aec62ff"
+            "redis_password": "02a037bc-2fca-4282-9d71-46349d6a9e77"
         }
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
