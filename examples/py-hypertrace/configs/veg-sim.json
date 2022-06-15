@@ -56,7 +56,22 @@
         }
     },
     "hypertrace": {
-        "atm_aod_h2o": [["ATM_MIDLAT_SUMMER", 0.2, 1.0], ["ATM_MIDLAT_SUMMER", 0.3, 2.0]],
+        "atm_aod_h2o": [["ATM_MIDLAT_SUMMER", 0.0, 0.5],
+                        ["ATM_MIDLAT_SUMMER", 0.25, 0.5],
+                        ["ATM_MIDLAT_SUMMER", 0.50, 0.5],
+                        ["ATM_MIDLAT_SUMMER", 0.75, 0.5],
+                        ["ATM_MIDLAT_SUMMER", 1.0, 0.5],
+                        ["ATM_MIDLAT_SUMMER", 0.0, 1.0],
+                        ["ATM_MIDLAT_SUMMER", 0.25, 1.0],
+                        ["ATM_MIDLAT_SUMMER", 0.50, 1.0],
+                        ["ATM_MIDLAT_SUMMER", 0.75, 1.0],
+                        ["ATM_MIDLAT_SUMMER", 1.0, 1.0],
+                        ["ATM_MIDLAT_SUMMER", 0.0, 2.0],
+                        ["ATM_MIDLAT_SUMMER", 0.25, 2.0],
+                        ["ATM_MIDLAT_SUMMER", 0.50, 2.0],
+                        ["ATM_MIDLAT_SUMMER", 0.75, 2.0],
+                        ["ATM_MIDLAT_SUMMER", 1.0, 2.0]],
+
         "observer_zenith": [0, 22.5],
         "inversion_mode": ["inversion"],
         "noisefile": ["~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"],
