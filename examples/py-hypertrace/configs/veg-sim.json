@@ -84,14 +84,10 @@
       "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"
     ],
     "observer_azimuth": [
-      0,
-      45,
-      90
+      0
     ],
     "observer_zenith": [
-      0,
-      45,
-      90
+      0
     ],
     "solar_azimuth": [
       0,
