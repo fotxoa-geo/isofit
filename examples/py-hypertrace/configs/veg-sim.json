@@ -1,153 +1,151 @@
 {
-  "hypertrace": {
-    "atm_aod_h2o": [
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.0,
-        0.5
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.25,
-        0.5
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.50,
-        0.5
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.75,
-        0.5
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        1.0,
-        0.5
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.0,
-        1.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.25,
-        1.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.50,
-        1.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.75,
-        1.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        1.0,
-        1.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.0,
-        2.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.25,
-        2.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.50,
-        2.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        0.75,
-        2.0
-      ],
-      [
-        "ATM_MIDLAT_SUMMER",
-        1.0,
-        2.0
-      ]
-    ],
-    "inversion_mode": [
-      "inversion"
-    ],
-    "noisefile": [
-      "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"
-    ],
-    "observer_azimuth": [
-      0
-    ],
-    "observer_zenith": [
-      0
-    ],
-    "solar_azimuth": [
-      0,
-      45,
-      90
-    ],
-    "solar_zenith": [
-      0,
-      45,
-      90
-    ],
-    "surface_file": [
-      "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"
-    ]
-  },
-  "isofit": {
-    "forward_model": {
-      "instrument": {
-        "SNR": 300,
-        "integrations": 1
-      },
-      "radiative_transfer": {
-        "lut_grid": {
-          "AOT550": [
-            0.01,
-            0.1,
-            0.258,
-            0.505,
-            0.752,
-            1.0
-          ],
-          "H2OSTR": [
-            0.1,
-            0.6125,
-            1.325,
-            2.55,
-            3.775,
-            5.0
-          ]
-        },
-        "radiative_transfer_engines": {
-          "vswir": {
-            "aerosol_template_path": "~/EMIT/isofit/data/aerosol_template.json",
-            "earth_sun_distance_file": "~/EMIT/isofit/data/earth_sun_distance.txt",
-            "emulator_aux_file": "~/EMIT/sRTMnet_v100/sRTMnet_v100_aux.npz",
-            "emulator_file": "~/EMIT/sRTMnet_v100/sRTMnet_v100",
-            "engine_base_dir": "~/EMIT/6sv-2.1",
-            "engine_name": "sRTMnet",
-            "irradiance_file": "~/EMIT/isofit/examples/20151026_SantaMonica/data/prism_optimized_irr.dat",
-            "statevector_names": [
-              "H2OSTR",
-              "AOT550"
+    "hypertrace": {
+        "atm_aod_h2o": [
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.0,
+                0.5
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.25,
+                0.5
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.5,
+                0.5
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.75,
+                0.5
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                1.0,
+                0.5
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.0,
+                1.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.25,
+                1.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.5,
+                1.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.75,
+                1.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                1.0,
+                1.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.0,
+                2.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.25,
+                2.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.5,
+                2.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                0.75,
+                2.0
+            ],
+            [
+                "ATM_MIDLAT_SUMMER",
+                1.0,
+                2.0
             ]
-          }
-        },
-        "statevector": {
-          "AOT550": {
-            "bounds": [
-              0.01,
-              1.0
+        ],
+        "inversion_mode": [
+            "inversion"
+        ],
+        "noisefile": [
+            "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"
+        ],
+        "observer_azimuth": [
+            0
+        ],
+        "observer_zenith": [
+            0
+        ],
+        "solar_azimuth": [
+            0
+        ],
+        "solar_zenith": [
+            0,
+            45,
+            90
+        ],
+        "surface_file": [
+            "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"
+        ]
+    },
+    "isofit": {
+        "forward_model": {
+            "instrument": {
+                "SNR": 300,
+                "integrations": 1
+            },
+            "radiative_transfer": {
+                "lut_grid": {
+                    "AOT550": [
+                        0.01,
+                        0.1,
+                        0.258,
+                        0.505,
+                        0.752,
+                        1.0
+                    ],
+                    "H2OSTR": [
+                        0.1,
+                        0.6125,
+                        1.325,
+                        2.55,
+                        3.775,
+                        5.0
+                    ]
+                },
+                "radiative_transfer_engines": {
+                    "vswir": {
+                        "aerosol_template_path": "~/EMIT/isofit/data/aerosol_template.json",
+                        "earth_sun_distance_file": "~/EMIT/isofit/data/earth_sun_distance.txt",
+                        "emulator_aux_file": "~/EMIT/sRTMnet_v100/sRTMnet_v100_aux.npz",
+                        "emulator_file": "~/EMIT/sRTMnet_v100/sRTMnet_v100",
+                        "engine_base_dir": "~/EMIT/6sv-2.1",
+                        "engine_name": "sRTMnet",
+                        "irradiance_file": "~/EMIT/isofit/examples/20151026_SantaMonica/data/prism_optimized_irr.dat",
+                        "statevector_names": [
+                            "H2OSTR",
+                            "AOT550"
+                        ]
+                    }
+                },
+                "statevector": {
+                    "AOT550": {
+                        "bounds": [
+                            0.01,
+                            1.0
                         ],
                         "init": 0.05,
                         "prior_mean": 0.05,
@@ -189,7 +187,10 @@
                         2450
                     ]
                 ]
-            }
+            },
+            "ip_head": "10.10.1.12:6379",
+            "n_cores": 12,
+            "redis_password": "3cdfcc81-d154-487d-9f79-3ef7efd7b173"
         }
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
