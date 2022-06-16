@@ -40,7 +40,7 @@ def do_hypertrace(isofit_config, wavelength_file, reflectance_file,
                   n_calibration_draws=1,
                   calibration_scale=1,
                   create_lut=True,
-                  overwrite=False):
+                  overwrite=True):
     """One iteration of the hypertrace workflow.
 
     Required arguments:
