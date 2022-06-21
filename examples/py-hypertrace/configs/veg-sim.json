@@ -93,9 +93,7 @@
             0
         ],
         "solar_zenith": [
-            0,
-            45,
-            90
+            0
         ],
         "surface_file": [
             "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"
@@ -189,8 +187,8 @@
                 ]
             },
             "ip_head": "10.10.1.12:6379",
-            "n_cores": 12,
-            "redis_password": "3cdfcc81-d154-487d-9f79-3ef7efd7b173"
+            "n_cores": 64,
+            "redis_password": "c76d4dc9-f71c-4c2a-97c1-75e07436ca9e"
         }
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
