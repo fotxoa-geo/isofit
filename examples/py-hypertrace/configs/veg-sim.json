@@ -45,7 +45,6 @@
                 "ATM_MIDLAT_SUMMER",
                 0.5,
                 1.0
-
             ],
             [
                 "ATM_MIDLAT_SUMMER",
@@ -189,7 +188,7 @@
             },
             "ip_head": "10.10.1.12:6379",
             "n_cores": 64,
-            "redis_password": "c76d4dc9-f71c-4c2a-97c1-75e07436ca9e"
+            "redis_password": "68afbb78-52c8-4368-acff-112a1d1e35af"
         }
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
