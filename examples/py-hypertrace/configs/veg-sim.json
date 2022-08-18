@@ -18,16 +18,6 @@
             ],
             [
                 "ATM_MIDLAT_SUMMER",
-                0.75,
-                0.5
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
-                1.0,
-                0.5
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
                 0.0,
                 1.0
             ],
@@ -38,42 +28,12 @@
             ],
             [
                 "ATM_MIDLAT_SUMMER",
-                0.75,
-                1.0
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
-                0.5,
-                1.0
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
-                1.0,
-                1.0
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
                 0.0,
                 2.0
             ],
             [
                 "ATM_MIDLAT_SUMMER",
                 0.25,
-                2.0
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
-                0.5,
-                2.0
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
-                0.75,
-                2.0
-            ],
-            [
-                "ATM_MIDLAT_SUMMER",
-                1.0,
                 2.0
             ]
         ],
@@ -84,16 +44,16 @@
             "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"
         ],
         "observer_azimuth": [
-            0
+            0, 45, 60
         ],
         "observer_zenith": [
-            0
+            0, 45, 60
         ],
         "solar_azimuth": [
-            0
+            0, 45, 60
         ],
         "solar_zenith": [
-            0
+            0, 45, 60
         ],
         "surface_file": [
             "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"
