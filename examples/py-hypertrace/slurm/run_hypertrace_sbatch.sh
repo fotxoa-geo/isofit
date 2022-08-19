@@ -56,8 +56,7 @@ which python
 ### run workflow and summary script
 echo " "
 echo "Run Hypertrace workflow"
-python workflow.py ${1}
-python summarize.py ${1}
+python ../isofit/examples/py-hypertrace/workflow.py ${1}
 
 echo " "
 echo "Run completed on: " `date`
