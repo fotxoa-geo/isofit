@@ -2,7 +2,7 @@
 #######################################################################################
 #SBATCH --job-name=hypertrace-slurm
 #SBATCH --out="hypertrace_job-%j.out"
-#SBATCH --nodes=4
+#SBATCH --nodes=2
 #SBATCH --cpus-per-task=16
 #SBATCH --tasks-per-node=1
 #SBATCH --mem-per-cpu=16GB
