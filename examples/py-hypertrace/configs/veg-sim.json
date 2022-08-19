@@ -44,16 +44,24 @@
             "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/noise/noise_coeff_sbg_cbe0.txt"
         ],
         "observer_azimuth": [
-            0, 45, 60
+            0,
+            45,
+            60
         ],
         "observer_zenith": [
-            0, 45, 60
+            0,
+            45,
+            60
         ],
         "solar_azimuth": [
-            0, 45, 60
+            0,
+            45,
+            60
         ],
         "solar_zenith": [
-            0, 45, 60
+            0,
+            45,
+            60
         ],
         "surface_file": [
             "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"
@@ -147,13 +155,13 @@
                 ]
             },
             "ip_head": "10.10.1.12:6379",
-            "n_cores": 64,
-            "redis_password": "68afbb78-52c8-4368-acff-112a1d1e35af"
+            "n_cores": 32,
+            "redis_password": "87265629-2974-4ea3-a45a-ae12daf412e0"
         }
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
     "outdir": "~/EMIT/veg-sim-data/output/hypertrace/veg-simulation-atmospheres",
-    "reflectance_file": "~/EMIT/veg-sim-data/output/spectra_grid_bootstrap",
+    "reflectance_file": "~/EMIT/veg-sim-data/output/convex-hull_before-split_4_spectra_grid_bootstrap",
     "rtm_template_file": "/dev/null",
     "wavelength_file": "~/EMIT/veg-simulation/wavelengths/emit_wavelengths.txt"
 }
