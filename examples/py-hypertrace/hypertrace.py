@@ -35,7 +35,7 @@ def do_hypertrace(isofit_config, wavelength_file, reflectance_file,
                   localtime=10.0,
                   elevation_km=0.01,
                   inversion_mode="inversion",
-                  use_empirical_line=False,
+                  use_empirical_line=True,
                   calibration_uncertainty_file=None,
                   n_calibration_draws=1,
                   calibration_scale=1,
@@ -398,12 +398,18 @@ def do_inverse(isofit_inv: dict,
         # Segment first, then run on segmented file
         SEGMENTATION_SIZE = 40
         CHUNKSIZE = 256
+        print(f"\n\n\n{radfile}\n\n\n\n\n")
         lbl_working_path = radfile.parent / str(radfile).replace("toa-radiance", "segmentation")
-        rdn_subs_path = radfile.with_suffix("-subs")
-        rfl_subs_path = est_refl_file.with_suffix("-subs")
-        state_subs_path = est_state_file.with_suffix("-subs")
-        atm_subs_path = atm_coef_file.with_suffix("-subs")
-        unc_subs_path = post_unc_file.with_suffix("-subs")
+        #rdn_subs_path = radfile.with_suffix("-subs")
+        #rfl_subs_path = est_refl_file.with_suffix("-subs")
+        #state_subs_path = est_state_file.with_suffix("-subs")
+        #atm_subs_path = atm_coef_file.with_suffix("-subs")
+        #unc_subs_path = post_unc_file.with_suffix("-subs")
+        rdn_subs_path = pathlib.Path(str(radfile) + "-subs")
+        rfl_subs_path = pathlib.Path(str(est_refl_file) + "-subs") #.with_suffix("-subs")
+        state_subs_path = pathlib.Path(str(est_state_file) + "-subs") #.with_suffix("-subs")
+        atm_subs_path = pathlib.Path(str(atm_coef_file) + "-subs") #.with_suffix("-subs")
+        unc_subs_path = pathlib.Path(str(post_unc_file) + "-subs") #.with_suffix("-subs")
         isofit_inv["input"]["measured_radiance_file"] = str(rdn_subs_path)
         isofit_inv["output"] = {
             "estimated_reflectance_file":  str(rfl_subs_path),
@@ -423,7 +429,7 @@ def do_inverse(isofit_inv: dict,
             del rad_img
             logger.info("Segmenting...")
             segment(spectra=(str(radfile), str(lbl_working_path)),
-                    flag=-9999, npca=5, segsize=SEGMENTATION_SIZE, nchunk=CHUNKSIZE)
+                    nodata_value=-9999, npca=5, segsize=SEGMENTATION_SIZE, nchunk=CHUNKSIZE)
             logger.info("Extracting...")
             extractions(inputfile=str(radfile), labels=str(lbl_working_path),
                         output=str(rdn_subs_path), chunksize=CHUNKSIZE, flag=-9999)
