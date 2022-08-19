@@ -153,7 +153,7 @@
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
     "outdir": "~/EMIT/veg-sim-data/output/hypertrace/veg-simulation-atmospheres",
-    "reflectance_file": "~/EMIT/veg-sim-data/output/spectra_grid_bootstrap",
+    "reflectance_file": "~/EMIT/veg-sim-data/output/convex-hull_before-split_4_spectra_grid_bootstrap",
     "rtm_template_file": "/dev/null",
     "wavelength_file": "~/EMIT/veg-simulation/wavelengths/emit_wavelengths.txt"
 }
