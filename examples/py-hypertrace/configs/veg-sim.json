@@ -33,16 +33,6 @@
             45,
             60
         ],
-        "solar_azimuth": [
-            0,
-            45,
-            60
-        ],
-        "solar_zenith": [
-            0,
-            45,
-            60
-        ],
         "surface_file": [
             "~/EMIT/isofit/examples/py-hypertrace/hypertrace-data/priors/emit/emit.mat"
         ]
@@ -134,9 +124,9 @@
                     ]
                 ]
             },
-            "ip_head": "10.10.1.12:6379",
-            "n_cores": 32,
-            "redis_password": "51e6e7d7-47d1-4287-8bb3-b156a2a7dbc4"
+            "ip_head": "10.10.1.14:6379",
+            "n_cores": 64,
+            "redis_password": "b8f3e90f-33f7-43f1-8bb3-b091dfaab13c"
         }
     },
     "lutdir": "~/EMIT/veg-sim-data/output/hypertrace/luts/sRTMnet",
