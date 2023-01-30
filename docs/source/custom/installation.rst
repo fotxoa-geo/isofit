@@ -1,45 +1,66 @@
-.. _installation:
-
 Installation
 ============
 
-From Github
-***********
+Install from conda-forge
+************************
+Recommended approach!
 
-The code repository, development branches, and user community are found on
-`GitHub <https://github.com/davidraythompson/isofit>`_. To install:
+New environment:
 
-1. Download or clone the git repo located at https://github.com/isofit/isofit, using either the `current-release <https://github.com/isofit/isofit/tree/current-release>`_ or `master (current-release + reviewed development) <https://github.com/isofit/isofit>`_ branch.
+.. code-block:: bash
 
-2. Install the ISOFIT using pip - be sure to use a full path reference.
+    mamba create -n isofit_env -c conda-forge isofit
+    mamba activate isofit_env
+    pip install ray ndsplines xxhash --upgrade
 
-.. code::
+or 
 
-    pip install --editable /path/to/isofit --use-feature=2020-resolver
+.. code-block:: bash
 
-From PyPI
-*********
+    conda create -n isofit_env -c conda-forge isofit
+    conda activate isofit_env
+    pip install ray ndsplines xxhash --upgrade
 
-Also, the latest release is always hosted on `PyPI <https://pypi.python.org/pypi/isofit>`_,
-so if you have `pip` installed, you can install ISOFIT from the command line with
+Within an existing environment:
 
-.. code::
+.. code-block:: bash
+
+    mamba install -c conda-forge isofit
+    pip install ray ndsplines xxhash --upgrade
+
+or
+
+.. code-block:: bash
+
+    conda install -c conda-forge isofit
+    pip install ray ndsplines xxhash --upgrade
+
+The additional pip installation is necessary as several packages are not available from conda-forge for all operating systems.
+
+
+Install from pip
+****************
+Not recommended, as package dependencies may not fully resolve.
+
+.. code-block:: bash
 
     pip install isofit
 
-This will install the "isofit" package into your environment as well as its dependencies.
 
-Using Utils
-***********
+Install from github
+*******************
 
-Several utilities are provided to facilitate using ISOFIT in different workflows.  Some
-of the utilities (such as `apply_oe.py <https://github.com/isofit/isofit/blob/master/isofit/utils/apply_oe.py>`_)
-require GDAL, which is not required in setup.py currently to facilitate diverse compatibility.
-An example installation is available in the `utils workflow <https://github.com/isofit/isofit/blob/master/.github/workflows/utils-workflow.yml>`_
+.. code-block:: bash
+
+    git clone https://github.com/isofit/isofit
+    mamba env create -f isofit/recipe/environment_isofit_basic.yml
+    mamba activate isofit_env
+    pip install -e ./isofit
+
 
 
 Setting environment variables
------------------------------
+=============================
 
 Depending on the selected RTM, specific environment variables pointing to the RTM's base directory have to be set prior to running ISOFIT.
 In the following, general instructions on how to set these variables on MacOS, Linux and Windows are provided.
@@ -93,9 +114,36 @@ Windows
 
     setx VARIABLE_NAME "DIRECTORY" (use your actual path)
 
+Quick Start with sRTMnet (Recommended for new users)
+====================================================
+
+sRTMnet is an emulator for MODTRAN 6, that works by coupling a neural network with a surrogate RTM (6S v2.1).
+Installation requires two steps:
+
+1. Download `6S v2.1 <https://salsa.umd.edu/files/6S/6sV2.1.tar>`_, and compile.  If you use a modern system,
+it is likely you will need to specify a legacy compiling configuration by changing line 3 of the Makefile to:
+
+.. code::
+
+    EXTRA   = -O -ffixed-line-length-132 -std=legacy
+
+2. Configure your environment by pointing the SIXS_DIR variable to point to your installation directory.
+
+3. Download the `pre-trained sRTMnet neural network <https://zenodo.org/record/4096627>`_, and (for the example below)
+point the environment variable EMULATOR_PATH to the base unzipped path.
+
+4. Run the following code
+
+.. code::
+
+    cd examples/image_cube/
+    sh ./run_example_cube.sh
+
+
+
 
 Quick Start using MODTRAN 6.0
------------------------------
+=============================
 
 This quick start presumes that you have an installation of the MODTRAN 6.0 radiative transfer model. This is the
 preferred radiative transfer option if available, though we have also included interfaces to the open source
@@ -114,8 +162,9 @@ LibRadTran RT code as well as to neural network emulators.
 
 4. Look for output data in examples/20171108_Pasadena/output/.
 
+
 Quick Start with LibRadTran 2.0.x
----------------------------------
+=================================
 
 This quick start requires an installation of the open source LibRadTran radiative transfer model (`LibRadTran <http://www.libradtran.org/doku.php>`_).
 A few important steps have to be considered when installing the software, which are outlined below. We have tested with the latest 2.0.4 release.
@@ -161,35 +210,10 @@ A few important steps have to be considered when installing the software, which 
 
 8. Look for output data in examples/20171108_Pasadena/output/.
 
-Quick Start with sRTMnet
-------------------------
-
-sRTMnet is an emulator for MODTRAN 6, that works by coupling a neural network with a surrogate RTM (6S v2.1).
-Installation requires two steps:
-
-1. Download `6S v2.1 <https://salsa.umd.edu/files/6S/6sV2.1.tar>`_, and compile.  If you use a modern system,
-it is likely you will need to specify a legacy compiling configuration by changing line 3 of the Makefile to:
-
-.. code::
-
-    EXTRA   = -O -ffixed-line-length-132 -std=legacy
-
-2. Configure your environment by pointing the SIXS_DIR variable to point to your installation directory.
-
-3. Download the `pre-trained sRTMnet neural network <https://zenodo.org/record/4096627>`_, and (for the example below)
-point the environment variable EMULATOR_PATH to the base unzipped path.
-
-4. Run the following code
-
-.. code::
-
-    cd examples/image_cube/
-    sh ./run_example_cube.sh
-
 
 
 Additional Installation Info for Mac OSX
-------------------------------------------
+========================================
 
 1. Install the command-line compiler
 
@@ -201,5 +225,16 @@ Additional Installation Info for Mac OSX
 
 
 Known Incompatibilities
------------------------
+=======================
+
 Ray may have compatability issues with older machines with glibc < 2.14.
+
+
+.. _Conda: https://conda.io/docs/
+.. _Miniforge: https://github.com/conda-forge/miniforge
+.. _Mamba: https://github.com/mamba-org/mamba
+.. _Anaconda: https://www.anaconda.com/products/distribution
+.. _Miniconda: https://docs.conda.io/en/latest/miniconda.html
+.. _pip: https://pip.pypa.io
+.. _Python installation guide: http://docs.python-guide.org/en/latest/starting/installation/
+.. _Ray: https://docs.ray.io/en/latest/index.html

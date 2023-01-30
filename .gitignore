@@ -13,7 +13,6 @@
 __pycache__
 
 # Ignore dynamic contents of example directories
-examples/**/*lut/*
 examples/**/data/*_vicarious_correction.txt
 examples/**/data/*_coastal_model.mat
 examples/**/output/*.txt
@@ -37,3 +36,6 @@ tests/output/*.txt
 # Ignore documentation files
 docs/_build/
 docs/html/_sources/
+
+# Ignore local testing directories
+local/
